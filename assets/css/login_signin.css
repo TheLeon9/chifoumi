@@ -7,12 +7,12 @@ html {
     margin: 0;
     box-sizing: unset;
 }
-body {
-    /* background-color: rgb(216, 216, 216); */
-    background-color:midnightblue;
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+:root {
+    --couleur-blanche: ghostwhite;
+    --neonjaune: gold;
+    --noir: black;
 }
+
 section {
     width: 100vw;
     height: 100vh;
@@ -20,6 +20,10 @@ section {
 .section {
     width: 100%;
     height: 100%;
+    background-image: url("../images/mur.png");
+    background-repeat: none;
+    background-size: cover;
+    font-family: 'Playball', cursive;
 }
 .all {
     width: 100%;
@@ -37,9 +41,15 @@ section {
     width: 1000px;
     height: 400px;
     display: flex;
-    border: solid 1px rgb(0, 0, 0, 0.6);
+    border: solid 1px var(--neonjaune);
     border-radius: 10px;
     background-color: rgb(0, 0, 0, 0.6);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+    0 0 .2rem var(--couleur-blanche),
+    0 0 2rem var(--neonjaune),
+    0 0 0.8rem var(--neonjaune),
+    0 0 2.8rem var(--neonjaune),
+    inset 0 0 1.3rem var(--neonjaune);
 }
 .gauche , 
 .droite{
@@ -48,7 +58,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ghostwhite;
+    color: var(--couleur-blanche);
 }
 .gauche div ,
 .droite div{
@@ -62,10 +72,14 @@ section {
     letter-spacing: 2px;
     width: 350px;
     font-weight: bold;
+    letter-spacing: 4px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to right, var(--neonjaune), transparent) 1;
 }
 .gauche p ,
 .droite p{
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 5px;
     letter-spacing: 2px;
 }
@@ -74,20 +88,19 @@ section {
     width: 100px;
     height: 40px;
     border-radius: 5px;
-    border: solid 2px ghostwhite;
+    border: solid 2px var(--neonjaune);
     background-color: rgb(0, 0, 0 , 0);
     margin-top: 20px;
-    font-size: 20px;
-    color: ghostwhite;
+    padding: 2px;
+    font-size: 22px;
+    color: var(--couleur-blanche);
     transition-duration:200ms ;
 }
 .droite button:hover,
 .gauche button:hover{
     cursor: pointer;
-    background-color: rgb(0, 0, 0);
+    color: var(--neonjaune);
     font-weight: bold;
-    padding: 2px;
-    font-size: 22px;
 }
 /* 
 +----------------------------------------------------------------------+
@@ -99,8 +112,7 @@ section {
     width: 500px;
     height: 500px;
     margin-right: 400px;
-    box-shadow: 0 0 1em rgb(0, 0, 0, 0.6);
-    background-color: #2a9df4;
+    background-color: var(--noir);
     border: solid rgb(0, 0, 0 ,0.6) 1px;
     border-radius: 10px;
     z-index: 1;
@@ -115,7 +127,7 @@ section {
     height: 500px;
     margin-left: 400px;
     box-shadow: 0 0 1em rgb(0, 0, 0, 0.6);
-    background-color: #2a9df4;
+    background-color: var(--noir);
     border: solid rgb(0, 0, 0 ,0.6) 1px;
     border-radius: 10px;
     z-index: -1;
@@ -128,7 +140,7 @@ section {
 .login{
     width: 400px;
     height: 400px;
-    color: ghostwhite;
+    color: var(--couleur-blanche);
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -139,7 +151,10 @@ section {
     font-size: 40px;
     letter-spacing: 2px;
     font-weight: bold;
-    color: black;
+    color: var(--couleur-blanche);
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to right, var(--neonjaune), transparent) 1;
 }
 .login .butsignin,
 .signin .butsignin{
@@ -157,39 +172,120 @@ section {
 }
 .signin p,
 .login p{
-    color: black;
-    font-size: 14px;
+    color: var(--couleur-blanche);
+    font-size: 16px;
     font-style: italic;
+    letter-spacing: 2px;
 }
 .signin a,
 .login a{
-    color: black;
-    font-size: 14px;
+    color: var(--neonjaune);
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 8px;
+    letter-spacing: 1px;
 }
 .signin a:hover,
 .login a:hover{
-    color: black;
-    font-size: 16px;
     cursor: pointer;
+    border-bottom: 1px solid var(--neonjaune);
 }
 .signin .bouton-sign,
 .login .bouton-sign{
     width: 100px;
     height: 40px;
     border-radius: 5px;
-    border: solid 2px ghostwhite;
-    background-color:black;
-    color: ghostwhite;
-    font-size: 20px;
+    border: solid 2px var(--neonjaune);
+    background-color: rgb(0, 0, 0 , 0);
+    margin-top: 20px;
+    padding: 2px;
+    font-size: 22px;
+    color: var(--couleur-blanche);
     transition-duration:200ms ;
 }
 .signin .bouton-sign:hover,
 .login .bouton-sign:hover{
     cursor: pointer;
-    background-color: rgb(0, 0, 0);
+    color: var(--neonjaune);
     font-weight: bold;
-    padding: 2px;
-    font-size: 22px;
+}
+.who{
+    display: flex;
+    flex-direction: column;
+}
+.who div{
+    display: flex;
+}
+.who .agree{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+input[type="checkbox"]{
+    position: relative;
+    width: 120px;
+    height: 30px;
+    -webkit-appearance: none;
+    background: var(--couleur-blanche);
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    box-shadow:  0 0 0 2px var(--neonjaune), 0 0 0 2px var(--neonjaune), inset 0 0 2px rgba(0, 0, 0, 1), 0 5px 6px rgba(0, 0, 0, .5);
+}
+input:checked[type="checkbox"]{
+    background: var(--neonjaune);
+    outline: none;
+}
+input[type="checkbox"]::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 30px;
+    background:black;
+    border-radius: 20px;
+    transition: .5s;
+}
+input:checked[type="checkbox"]::before{
+    left: 40px;
+}
+input[type="checkbox"]::after{
+    content:"";
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 65px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--couleur-blanche);
+    border-radius: 50%;
+    transition: .5s;
+}
+input:checked[type="checkbox"]::after{
+    left: 105px;
+    background-color: var(--neonjaune);
+}
+.who input:focus{
+    border:none;	
+    outline:none;
+    border-bottom:none !important;	
+}
+.who .agree label{
+    margin-left: 20px;
+    
+}
+.who .agree label a{
+    color: var(--neonjaune);
+    text-decoration: none;
+    font-size: 16px;
+}
+.who .agree label a:hover{
+    border-bottom: 1px solid var(--neonjaune);
+}
+.who .agree input:focus ~ label{
+    color: var(--couleur-blanche);
+    font-size: 16px;
 }
 /* 
 +----------------------------------------------------------------------+
@@ -201,12 +297,14 @@ section {
     height: 30px;
     font-size: 16px;
     border:0;
-    border-bottom:2px solid rgb(0, 0, 0);  
-    background-color: #2a9df4;
+    border-bottom:2px solid var(--couleur-blanche);  
+    background-color: var(--noir);
     padding:8px 0 5px 0;
     background-image: url("../images/person_black_24dp.svg");
     background-position: right ; 
     background-repeat: no-repeat;
+    color: var(--couleur-blanche);
+
 
 }
 .intputcontmail input{
@@ -214,24 +312,27 @@ section {
     height: 30px;
     font-size: 16px;
     border:0;
-    border-bottom:2px solid rgb(0, 0, 0);  
-    background-color: #2a9df4;
+    border-bottom:2px solid var(--couleur-blanche);  
+    background-color: var(--noir);
     padding:8px 0 5px 0;
     background-image: url("../images/email_black_24dp.svg");
     background-position: right ; 
     background-repeat: no-repeat;
+    color: var(--couleur-blanche);
 }
 .intputcont input{
     width: 350px;
     height: 30px;
     font-size: 16px;
     border:0;
-    border-bottom:2px solid rgb(0, 0, 0);  
-    background-color: #2a9df4;
+    border-bottom:2px solid var(--couleur-blanche);  
+    background-color: var(--noir);
     padding:8px 0 5px 0;
     background-image: url("../images/lock_black_24dp.svg");
     background-position: right ; 
     background-repeat: no-repeat;
+    color: var(--couleur-blanche);
+
 
 }
 .intputcontname,
@@ -246,31 +347,29 @@ section {
 	top:10px;
 	left:0px;
 	font-size:16px;
-	color:rgb(0, 0, 0);	
+	color: var(--couleur-blanche);	
 	transition: all 0.5s ease-in-out;
+    letter-spacing: 2px;
+
 }
 .signin input:focus,
 .login input:focus{
     border:none;	
     outline:none;
-    border-bottom:2px solid black;	
-
+    border-bottom:2px solid var(--neonjaune);	
 }
 .signin input:focus ~ label,
 .login input:focus ~ label{
 	top:-12px;
 	font-size:14px;
+    color: var(--neonjaune);
 }
-/* .signin input:valid ~ label,
-.login input:valid ~ label{
-	top:-12px;
-	font-size:14px;
-} */
 .intputcontname input:valid ~ label,
 .intputcontmail input:valid~ label,
 .intputcont input:valid~ label{
     top:-12px;
 	font-size:14px;
+    color: var(--neonjaune)
 }
 /* 
 +----------------------------------------------------------------------+
@@ -313,7 +412,7 @@ section {
 */
 ::-moz-selection {
     color: black;
-    background-color: #2a9df4;
+    background-color: var(--noir);
 }
 
 ::selection {
@@ -331,7 +430,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #2a9df4;
+    background-color: var(--noir);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -340,5 +439,5 @@ section {
 
 ::-webkit-scrollbar-button {
     height: 8px;
-    background-color: #2a9df4;
+    background-color: var(--noir);
 }

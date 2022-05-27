@@ -92,38 +92,39 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIN - SignIN</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/login_signin.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/login_signin.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 </head>
+
 <body>
-        <section>
-            <div class="section">
-                <div class="all">
-                    <div class="sur-cadre-gauche" id ="signin">
-                        <form method="post" action="inscription.php" autocomplete="off">
+    <section>
+        <div class="section">
+            <div class="all">
+                <div class="sur-cadre-gauche" id="signin">
+                    <form method="post" action="inscription.php" autocomplete="off">
                         <div class="signin">
                             <h2>SIGN IN</h2>
-                                <div class="intputcontname">
-                                    <input name="name" type="text" required=""/>
-                                    <label>Full Name</label>	
-                                </div>
-                                <div class="intputcontmail">
-                                    <input name="email" type="email" pattern=".*@.*\..*" required=""/>
-                                    <label>Email</label>	
-                                </div>
-                                <div class="intputcont">
-                                    <input name="mdp" type="password" required=""/>
-                                    <label>PassWord</label>	
-                                </div>
-                                <?php
+                            <div class="intputcontname">
+                                <input name="name" type="text" required="" />
+                                <label>Full Name</label>
+                            </div>
+                            <div class="intputcontmail">
+                                <input name="email" type="email" pattern=".*@.*\..*" required="" />
+                                <label>Email</label>
+                            </div>
+                            <div class="intputcont">
+                                <input name="mdp" type="password" required="" />
+                                <label>PassWord</label>
+                            </div>
+                            <?php
                                 if(isset($alreadyexist)){
                                     if($alreadyexist){
                                         echo  "<p>Name or Email already exist !</p>";
@@ -134,26 +135,41 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
                                     }
                                 }
                                 ?>
+                                <div class="who">
+                                    <div>
+                                        <label for="gender">Who are you ?</label>
+                                        <select name="gender" id="gender" required>
+                                            <option value="">--Please choose an option--</option>
+                                            <option value="man">Man</option>
+                                            <option value="woman">Woman</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="agree">
+                                        <input type="checkbox" id="agree" name="agree" required>
+                                        <label for="agree">Agree to <a href="">Terms and Conditions</a></label>
+                                    </div>
+                                </div>
                             <div class="butsignin">
                                 <a href="../index.php">Go back Home ?</a>
-                                <input type="submit" value="SIGN IN" class="bouton-sign"/>
+                                <input type="submit" value="SIGN IN" class="bouton-sign" />
                             </div>
                         </div>
-                        </form>
-                    </div>
-                    <div class="sur-cadre-droite" id="login">
-                    <form method="post"  action="inscription.php" autocomplete="off">
-                        <div class="login" >
+                    </form>
+                </div>
+                <div class="sur-cadre-droite" id="login">
+                    <form method="post" action="inscription.php" autocomplete="off">
+                        <div class="login">
                             <h2>LOGIN</h2>
-                                <div class="intputcontmail">
-                                    <input type="email" name="emailco" pattern=".*@.*\..*" required=""/>
-                                    <label>Email</label>	
-                                </div>
-                                <div class="intputcont">
-                                    <input type="password" name="mdpco" required=""/>
-                                    <label>PassWord</label>	
-                                </div>
-                                <?php
+                            <div class="intputcontmail">
+                                <input type="email" name="emailco" pattern=".*@.*\..*" required="" />
+                                <label>Email</label>
+                            </div>
+                            <div class="intputcont">
+                                <input type="password" name="mdpco" required="" />
+                                <label>PassWord</label>
+                            </div>
+                            <?php
                                 if(isset($noexits)){
                                     if($noexits){
                                         echo  "<p>Email or Password doesn't exist !</p>";
@@ -165,30 +181,31 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
                                 ?>
                             <div class="butsignin">
                                 <a href="../index.php">Go back Home ?</a>
-                                <input type="submit" value="LOGIN" class="bouton-sign"/>
+                                <input type="submit" value="LOGIN" class="bouton-sign" />
                             </div>
                         </div>
                     </form>
-                    </div>
-                    <div class="cadre">
-                        <div class="gauche">
-                            <div>
-                                <h2>Don't have an account ?</h2>
-                                <p>Create one by clicking on the next button "SIGN IN"</p>
-                                <button class="bouton-sign" onclick="seeSignIN()">SIGN IN</button>
-                            </div>
+                </div>
+                <div class="cadre">
+                    <div class="gauche">
+                        <div>
+                            <h2>Don't have an account ?</h2>
+                            <p>Create one by clicking on the next button "SIGN IN"</p>
+                            <button class="bouton-sign" onclick="seeSignIN()"> SIGN IN</button>
                         </div>
-                        <div class="droite">
-                            <div>
-                                <h2>Already have an account ?</h2>
-                                <p>Login by clicking on the next button  "LOGIN"</p>
-                                <button class="bouton-login" onclick="seeLogIn()">LOGIN</button>
-                            </div>
+                    </div>
+                    <div class="droite">
+                        <div>
+                            <h2>Already have an account ?</h2>
+                            <p>Login by clicking on the next button "LOGIN"</p>
+                            <button class="bouton-login" onclick="seeLogIn()">LOGIN</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <script src="../assets/js/login_signin.js"></script>
 </body>
+
 </html>
