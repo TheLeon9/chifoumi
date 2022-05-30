@@ -18,10 +18,10 @@
             <div class="welcome-carre">
                 <div>
                     <div class="img">
-                        <div><img src="./assets/images/chi.svg" alt="chi"></div>
-                        <div> <img src="./assets/images/fou.svg" alt="fou">
+                        <div><img src="./assets/images/welcome/chi.svg" alt="chi"></div>
+                        <div> <img src="./assets/images/welcome/fou.svg" alt="fou">
                         </div>
-                        <div> <img src="./assets/images/mi.svg" alt="mi">
+                        <div> <img src="./assets/images/welcome/mi.svg" alt="mi">
                         </div>
 
                     </div>
@@ -39,8 +39,8 @@
                 </div>
                 <div class="button-container">
                     <div class="press">
-                        <p>Press</p>
-                        <img src="./assets/images/chevrons-down.svg" alt="fleche bas">
+                        <p>Hover and Press</p>
+                        <img src="./assets/images/welcome/chevrons-down.svg" alt="fleche bas">
                     </div>
                     <a href="./php/inscription.php">
                         <span></span><span></span><span></span><span></span>
@@ -50,9 +50,6 @@
             </div>
         </div>
     </section>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
-    </style>
 </body>
 
 </html>

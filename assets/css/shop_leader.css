@@ -1,0 +1,427 @@
+body,
+html {
+    overflow-x: hidden;
+
+}
+
+:root {
+    --couleur-blanche: ghostwhite;
+    --neonred:red;
+    --neonorange:orange;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: unset;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/mur.png");
+    background-repeat: none;
+    background-size: cover;
+}
+.welcome-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playball', cursive;
+}
+/* 
++----------------------------------------------------------------------+
+| Shop
++----------------------------------------------------------------------+
+*/
+.welcome-carre-shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 60%;
+}
+.welcome-carre-shop img:first-child{
+    height: 300px;
+    filter: drop-shadow(0 0 .2rem var(--neonred));
+
+}
+.welcome-carre-shop img:last-child{
+    height: 300px;
+    filter: drop-shadow(0 0 .2rem var(--neonred));
+
+}
+/* 
++----------------------------------------------------------------------+
+| Return Shop
++----------------------------------------------------------------------+
+*/
+.welcome-carre-shop a{
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    padding: 15px 30px;
+    text-shadow:
+    0 0 7px var(--couleur-blanche),
+    0 0 10px var(--couleur-blanche),
+    0 0 21px var(--couleur-blanche),
+    0 0 22px var(--neonred),
+    0 0 30px var(--neonred);
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to right, transparent, var(--neonred), transparent) 1;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.welcome-carre-shop a:hover{
+    color: black;
+    background-color: var(--neonred);
+    box-shadow: 0 0 10px var(--neonred), 0 0 40px var(--neonred),0 0 80px var(--neonred) ;
+    transition-delay: 1s;
+}
+.welcome-carre-shop a span{
+    position: absolute;
+    display: block;
+}
+
+.welcome-carre-shop a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, red);
+}
+.welcome-carre-shop a:hover span:nth-child(1){
+    left: 100%;
+    transition: 0.6s;
+}
+
+
+.welcome-carre-shop a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, red);
+}
+.welcome-carre-shop a:hover span:nth-child(3){
+    right: 100%;
+    transition: 0.6s;
+    transition-delay: 0.5s;
+}
+
+
+.welcome-carre-shop a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, red);
+}
+.welcome-carre-shop a:hover span:nth-child(2){
+    top: 100%;
+    transition: 0.6s;
+    transition-delay: 0.25s;
+}
+
+
+.welcome-carre-shop a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, red);
+}
+.welcome-carre-shop a:hover span:nth-child(4){
+    bottom: 100%;
+    transition:0.6s;
+    transition-delay: 0.75s;
+}
+
+
+/* 
++----------------------------------------------------------------------+
+| Titre Shop
++----------------------------------------------------------------------+
+*/
+.welcome-carre-shop h2{
+    font-size: 80px;
+    color: var(--couleur-blanche);
+    border: 0.2rem solid var(--couleur-blanche);
+    border-radius: 2rem;
+    padding: 0.4em;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 42px var(--neonred),
+        0 0 82px var(--neonred),
+        0 0 92px var(--neonred),
+        0 0 102px var(--neonred),
+        0 0 151px var(--neonred);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+        0 0 .2rem var(--couleur-blanche),
+        0 0 2rem var(--neonred),
+        0 0 0.8rem var(--neonred),
+        0 0 2.8rem var(--neonred),
+        inset 0 0 1.3rem var(--neonred);
+}
+h2 span:first-child{
+    animation: disparait  2s linear  infinite;
+    opacity: 1;
+}
+h2 .middle{
+    animation: disparaitt  2s linear  infinite;
+    opacity: 0;
+
+}
+h2 span:last-child{
+    animation: disparaittt 2s linear  infinite;
+    opacity: 0;
+}
+@keyframes disparait{
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+
+}
+@keyframes disparaitt{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+@keyframes disparaittt{
+    0%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+
+/* 
++----------------------------------------------------------------------+
+| LeaderBord
++----------------------------------------------------------------------+
+*/
+.welcome-carre-leader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 60%;
+    color: var(--couleur-blanche);
+}
+.welcome-carre-leader h2{
+    font-size: 80px;
+    color: var(--couleur-blanche);
+    border: 0.2rem solid var(--couleur-blanche);
+    border-radius: 2rem;
+    padding: 0.4em;
+    letter-spacing: 4px;
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 42px var(--neonorange),
+        0 0 82px var(--neonorange),
+        0 0 92px var(--neonorange),
+        0 0 102px var(--neonorange),
+        0 0 151px var(--neonorange);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+        0 0 .2rem var(--couleur-blanche),
+        0 0 2rem var(--neonorange),
+        0 0 0.8rem var(--neonorange),
+        0 0 2.8rem var(--neonorange),
+        inset 0 0 1.3rem var(--neonorange);
+}
+
+
+
+/* 
++----------------------------------------------------------------------+
+| Return Leaderbord
++----------------------------------------------------------------------+
+*/
+.welcome-carre-leader a{
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    padding: 15px 30px;
+    text-shadow:
+    0 0 7px var(--couleur-blanche),
+    0 0 10px var(--couleur-blanche),
+    0 0 21px var(--couleur-blanche),
+    0 0 22px var(--neonorange),
+    0 0 30px var(--neonorange);
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to right, transparent, var(--neonorange), transparent) 1;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.welcome-carre-leader a:hover{
+    color: black;
+    background-color: var(--neonorange);
+    box-shadow: 0 0 10px var(--neonorange), 0 0 40px var(--neonorange),0 0 80px var(--neonorange) ;
+    transition-delay: 1s;
+}
+.welcome-carre-leader a span{
+    position: absolute;
+    display: block;
+}
+
+.welcome-carre-leader a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, orange);
+}
+.welcome-carre-leader a:hover span:nth-child(1){
+    left: 100%;
+    transition: 0.6s;
+}
+
+
+.welcome-carre-leader a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, orange);
+}
+.welcome-carre-leader a:hover span:nth-child(3){
+    right: 100%;
+    transition: 0.6s;
+    transition-delay: 0.5s;
+}
+
+
+.welcome-carre-leader a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, orange);
+}
+.welcome-carre-leader a:hover span:nth-child(2){
+    top: 100%;
+    transition: 0.6s;
+    transition-delay: 0.25s;
+}
+
+
+.welcome-carre-leader a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, orange);
+}
+.welcome-carre-leader a:hover span:nth-child(4){
+    bottom: 100%;
+    transition:0.6s;
+    transition-delay: 0.75s;
+}
+
+/* 
++----------------------------------------------------------------------+
+| Return Podium
++----------------------------------------------------------------------+
+*/
+/* 
++----------------------------------------------------------------------+
+| Pour les sélections
++----------------------------------------------------------------------+
+*/
+::-moz-selection {
+    color: black;
+    background-color: #2a9df4;
+}
+
+::selection {
+    color: gold;
+    background-color: blue;
+}
+
+/* 
++----------------------------------------------------------------------+
+| Scroll Bar
++----------------------------------------------------------------------+
+*/
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #193273;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: cyan;
+}
+
+::-webkit-scrollbar-button {
+    height: 8px;
+    background-color: #0086c8;
+}

@@ -1,0 +1,15 @@
+<svg width="253" height="381" viewBox="0 0 253 381" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="66.2559" y="242" width="118" height="15" stroke="white" stroke-width="6"/>
+<path d="M66.2559 306H120.256V347.5H66.2559V306ZM66.2559 375V353.5H120.256V375C120.256 376.657 118.913 378 117.256 378H69.2559C67.599 378 66.2559 376.657 66.2559 375ZM66.2559 300L66.2559 261C66.2559 259.343 67.599 258 69.2559 258H117.256C118.913 258 120.256 259.343 120.256 261V300H66.2559Z" stroke="white" stroke-width="6"/>
+<rect x="130.256" y="378" width="120" height="54" rx="3" transform="rotate(-90 130.256 378)" stroke="white" stroke-width="6"/>
+<path d="M130.756 304.5H184.756M184.756 351H130.756" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<rect x="81.2559" y="24" width="89" height="80" rx="17" stroke="white" stroke-width="6"/>
+<rect x="102" y="3" width="49" height="20" rx="5" stroke="white" stroke-width="6"/>
+<path d="M88.1868 117H164.302C172.616 117 179.711 123.014 181.072 131.217L194.407 211.559C196.134 221.963 188.069 231.412 177.523 231.342L74.7417 230.657C64.2782 230.587 56.361 221.171 58.0883 210.851L71.42 131.194C72.791 123.002 79.8808 117 88.1868 117Z" stroke="white" stroke-width="6"/>
+<path d="M29.7559 193.5C35.2559 166.667 51.8559 115.1 74.2559 123.5" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<path d="M222.756 193.914C217.256 167.081 200.656 115.514 178.256 123.914" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<path d="M33.2559 203.5C41.4225 203.167 57.8559 203.6 58.2559 208" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<path d="M220.256 203.088C212.089 202.755 195.656 203.188 195.256 207.588" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<path d="M48.2559 218L46.7559 232C54.9225 238.167 65.2559 255.4 41.2559 275L38.2559 263C61.7559 238 7.75588 227 20.2559 259.5L13.2559 271.5C3.0892 262.5 -8.24414 236.5 26.2559 224.5" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<path d="M204.135 217L205.635 231C197.468 237.167 187.135 254.4 211.135 274L214.135 262C190.635 237 244.635 226 232.135 258.5L239.135 270.5C249.301 261.5 260.635 235.5 226.135 223.5" stroke="white" stroke-width="6" stroke-linecap="round"/>
+</svg>

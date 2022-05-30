@@ -30,8 +30,20 @@ if (isset($_POST["name"], $_POST["email"], $_POST["mdp"])) {
                 while ($row = mysqli_fetch_assoc($db_id)) {
                     $id = $row['Id'];
                 }
-                $ins = $bdd->prepare('INSERT INTO users (Email, Username, Password, Level, Win, Lose) VALUES (?, ?, ?, ?, ?, ?)');
-                $ins->execute(array($email, $username, $mdp, 0, 0, 0));
+                if($_POST["gender"] == "man"){
+                    $gender = "man";
+
+                }elseif($_POST["gender"] == "woman"){
+                    $gender = "woman";
+                }
+                else{
+                    $gender = "other";
+                }
+                $skinp ="defaultP.png";
+                $skinf ="defaultF.png";
+                $skinc ="defaultC.png";
+                $ins = $bdd->prepare('INSERT INTO users (Email, Username, Password, Level, Win, Lose, gender, skinp, skinf, skinc) VALUES (?, ?, ?, ?, ?, ?, ?, ? , ?, ?)');
+                $ins->execute(array($email, $username, $mdp, 0, 0, 0 , $gender, $skinp, $skinf , $skinc));
             }
         }
     }
@@ -72,10 +84,41 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
                 while ($row = mysqli_fetch_assoc($db_idco)) {
                     $id = $row['Id'];
                 }
-            $level = 1;
-            $lose = 1;
-            $win = 1;
-            
+                $levelco = "SELECT Level FROM users WHERE Email=\"$emailco\"";
+                $winco = "SELECT Win FROM users WHERE Email=\"$emailco\"";
+                $loseco = "SELECT Lose FROM users WHERE Email=\"$emailco\"";
+                $db_levelco = mysqli_query($bdd, $levelco);
+                $db_winco = mysqli_query($bdd, $winco);
+                $db_loseco = mysqli_query($bdd, $loseco);
+                while ($row = mysqli_fetch_assoc($db_levelco)) {
+                    $level = $row['Level'];
+                }
+                while ($row = mysqli_fetch_assoc($db_winco)) {
+                    $win = $row['Win'];
+                }
+                while ($row = mysqli_fetch_assoc($db_loseco)) {
+                    $lose = $row['Lose'];
+                }
+                $genderco = "SELECT gender FROM users WHERE Email=\"$emailco\"";
+                $skinpco = "SELECT skinp FROM users WHERE Email=\"$emailco\"";
+                $skinfco = "SELECT skinf FROM users WHERE Email=\"$emailco\"";
+                $skincco = "SELECT skinc FROM users WHERE Email=\"$emailco\"";
+                $db_genderco = mysqli_query($bdd, $genderco);
+                $db_skinpco = mysqli_query($bdd, $skinpco);
+                $db_skinfco = mysqli_query($bdd, $skinfco);
+                $db_skincco = mysqli_query($bdd, $skincco);
+                while ($row = mysqli_fetch_assoc($db_genderco)) {
+                    $gender = $row['gender'];
+                }
+                while ($row = mysqli_fetch_assoc($db_skinpco)) {
+                    $skinp = $row['skinp'];
+                }
+                while ($row = mysqli_fetch_assoc($db_skinfco)) {
+                    $skinf = $row['skinf'];
+                }
+                while ($row = mysqli_fetch_assoc($db_skincco)) {
+                    $skinc = $row['skinc'];
+                }
                     $_SESSION['name'] = $u;
                     $_SESSION['email'] = $emailco;
                     $_SESSION['mdp'] = $m;
@@ -83,7 +126,10 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
                     $_SESSION['level'] = $level;
                     $_SESSION['win'] = $win;
                     $_SESSION['lose'] = $lose;
-                
+                    $_SESSION['gender'] = $gender;
+                    $_SESSION['skinp'] = $skinp;
+                    $_SESSION['skinf'] = $skinf;
+                    $_SESSION['skinc'] = $skinc;
             }
         }
     }
@@ -174,7 +220,7 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
                                     if($noexits){
                                         echo  "<p>Email or Password doesn't exist !</p>";
                                     }else{
-                                        header('Location: ./accounts.php');
+                                        header('Location: ./menu.php');
                                         exit();
                                     }
                                 }

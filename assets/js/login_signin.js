@@ -20,3 +20,13 @@ function seeLogIn(){
         document.getElementById("signin").style.zIndex = "-1";
     }, delay);
 }
+function cacher(){
+    if(document.getElementById("+").innerHTML == "-"){
+        document.getElementById("cacher").style.opacity = "0";
+        document.getElementById("+").innerHTML = "+";
+    }else{
+        document.getElementById("cacher").style.opacity = "1";
+        document.getElementById("+").innerHTML = "-";
+    }
+
+}

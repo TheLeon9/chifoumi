@@ -113,28 +113,39 @@ section {
     height: 500px;
     margin-right: 400px;
     background-color: var(--noir);
-    border: solid rgb(0, 0, 0 ,0.6) 1px;
+    border: solid 1px var(--neonjaune);
     border-radius: 10px;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center; 
     opacity: 1;
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+    0 0 .2rem var(--couleur-blanche),
+    0 0 2rem var(--neonjaune),
+    0 0 0.8rem var(--neonjaune),
+    0 0 2.8rem var(--neonjaune),
+    inset 0 0 1.3rem var(--neonjaune);
 }
 .sur-cadre-droite{
     position: absolute;
     width: 500px;
     height: 500px;
     margin-left: 400px;
-    box-shadow: 0 0 1em rgb(0, 0, 0, 0.6);
     background-color: var(--noir);
-    border: solid rgb(0, 0, 0 ,0.6) 1px;
+    border: solid 1px var(--neonjaune);
     border-radius: 10px;
     z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+    0 0 .2rem var(--couleur-blanche),
+    0 0 2rem var(--neonjaune),
+    0 0 0.8rem var(--neonjaune),
+    0 0 2.8rem var(--neonjaune),
+    inset 0 0 1.3rem var(--neonjaune);
 }
 .signin,
 .login{
@@ -172,10 +183,13 @@ section {
 }
 .signin p,
 .login p{
-    color: var(--couleur-blanche);
-    font-size: 16px;
+    color: var(--neonjaune);
+    font-size: 18px;
     font-style: italic;
+    text-decoration: underline;
     letter-spacing: 2px;
+    font-weight: bold;
+
 }
 .signin a,
 .login a{
