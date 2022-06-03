@@ -30,3 +30,15 @@ function cacher(){
     }
 
 }
+function showmodifname(){
+    document.getElementById("modifname").style.top="70px";
+}
+function hidemodifname(){
+    document.getElementById("modifname").style.top="-1000px";
+}
+function showmodiftitle(){
+    document.getElementById("modiftitle").style.top="70px";
+}
+function hidemodiftitle(){
+    document.getElementById("modiftitle").style.top="-1000px";
+}

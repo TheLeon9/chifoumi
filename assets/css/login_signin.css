@@ -385,6 +385,16 @@ input:checked[type="checkbox"]::after{
 	font-size:14px;
     color: var(--neonjaune)
 }
+select{
+    outline: none;
+    color: var(--neonjaune);
+    background-color: var(--noir);
+    font-size: 14px;
+    border: solid 1px var(--couleur-blanche);
+}
+select option{
+    padding: 2px;
+}
 /* 
 +----------------------------------------------------------------------+
 | animation

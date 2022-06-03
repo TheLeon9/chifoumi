@@ -96,15 +96,19 @@ h2 {
 }
 
 .left {
-    width: 72%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
+.left img{
+    height: 20px;
+    filter: drop-shadow(0 0 .2rem var(--neonbleu));
+}
 .right {
-    width: 28%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -130,7 +134,7 @@ h2 {
 .cacher p,
 .right p,
 .left p {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2px;
     color: var(--couleur-blanche);
     text-shadow:
@@ -151,7 +155,29 @@ h2 {
     border-width: 2px;
     border-image: linear-gradient(to right, var(--neonbleu), transparent) 1;
 }
-
+.secret div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secret div h3{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+}
+.secret div h3 button{
+    margin-right: 6px;
+    margin-left: 8px;
+}
 .secret p {
     color: var(--couleur-blanche);
     border-radius: 50%;
@@ -168,6 +194,7 @@ h2 {
         0 0 0.8rem var(--neonbleu),
         0 0 2.8rem var(--neonbleu),
         inset 0 0 1.3rem var(--neonbleu);
+        margin-right: 50px;
 
 }
 
@@ -180,7 +207,25 @@ h2 {
         0 0 4.2rem var(--neonbleu),
         inset 0 0 2.6rem var(--neonbleu);
 }
-
+.secret button{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0.2rem solid var(--neonbleu);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+        0 0 .2rem var(--couleur-blanche),
+        0 0 2rem var(--neonbleu),
+        0 0 0.8rem var(--neonbleu),
+        0 0 2.8rem var(--neonbleu),
+        inset 0 0 1.3rem var(--neonbleu);
+}
+.secret img{
+    height: 20px;
+}
 .cacher {
     width: 80%;
     height: 10%;
@@ -200,13 +245,6 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6px;
-}
-.skin{
-    height: 20%;
-    width: 80%;
-    border-bottom-style: solid;
-    border-width: 2px;
-    border-color: var(--neonbleu);
 }
 .logout{
     width: 80%;
@@ -231,6 +269,7 @@ h2 {
         inset 0 0 1.3rem var(--neonbleu);
 }
 
+.secret button:hover,
 .logout button:hover {
     cursor: pointer;
     box-shadow: 0 0 .4rem var(--couleur-blanche),
@@ -266,6 +305,243 @@ h2 {
 
 }
 
+
+/* 
++----------------------------------------------------------------------+
+| Pour les pop up et skin actuel
++----------------------------------------------------------------------+
+*/
+.exist{
+    text-align: center;
+    margin-top: 6px;
+}
+.modifname{
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    top: -1000px;
+    background-color: black;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.modifname .modifff{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.modifname .modifff div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+.skinactuel h3,
+.modifname h3{
+    color: var(--couleur-blanche);
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 4px;
+    padding: 4px;
+    margin-top: 40px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to right, transparent, var(--neonbleu), transparent) 1;
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 42px var(--neonbleu),
+        0 0 82px var(--neonbleu),
+        0 0 92px var(--neonbleu),
+        0 0 102px var(--neonbleu),
+        0 0 151px var(--neonbleu);
+
+}
+.modifname strong{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+}
+.skinactuel p,
+.modifname label,
+.modifname p{
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+
+}
+.modifname .edit{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 2px var(--neonbleu) !important;
+    padding: 2px;
+    font-size: 22px;
+    color: var(--couleur-blanche);
+
+}
+.modifname .edit:hover{
+    cursor: pointer;
+    color: var(--neonbleu);
+    font-weight: bold;
+
+}
+.cancel{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0.2rem solid var(--neonbleu);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+        0 0 .2rem var(--couleur-blanche),
+        0 0 2rem var(--neonbleu),
+        0 0 0.8rem var(--neonbleu),
+        0 0 2.8rem var(--neonbleu),
+        inset 0 0 1.3rem var(--neonbleu);
+
+}
+.cancel:hover{
+    cursor: pointer;
+    box-shadow: 0 0 .4rem var(--couleur-blanche),
+        0 0 .4rem var(--couleur-blanche),
+        0 0 4rem var(--neonbleu),
+        0 0 1rem var(--neonbleu),
+        0 0 4.2rem var(--neonbleu),
+        inset 0 0 2.6rem var(--neonbleu);
+
+}
+
+.modifname input{
+    width: 350px;
+    height: 30px;
+    font-size: 16px;
+    border:0;
+    border-bottom:2px solid var(--couleur-blanche);  
+    border-left:2px solid var(--couleur-blanche);  
+    background-color: black;
+    padding:8px 0 5px 5px;
+    color: var(--couleur-blanche);
+    
+}
+.modifname input:focus{
+    border:none;	
+    outline:none;
+    border-bottom:2px solid var(--neonbleu);	
+    border-left:2px solid var(--neonbleu);	
+}
+.modifname input:valid{
+    border:none;	
+    outline:none;
+    border-bottom:2px solid var(--neonbleu);	
+    border-left:2px solid var(--neonbleu);	
+}
+.skinactuel{
+    position: absolute;
+    right: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 20%;
+    border: solid 1px var(--neonbleu);
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.6);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+        0 0 .2rem var(--couleur-blanche),
+        0 0 2rem var(--neonbleu),
+        0 0 0.8rem var(--neonbleu),
+        0 0 2.8rem var(--neonbleu),
+        inset 0 0 1.3rem var(--neonbleu);
+
+}
+.skinactuel img{
+    height: 80px;
+    filter: drop-shadow(0 0 .7rem var(--neonbleu));
+
+}
+/* 
++----------------------------------------------------------------------+
+| Skin
++----------------------------------------------------------------------+
+*/
+.skin{
+    height: 20%;
+    width: 80%;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: var(--neonbleu);
+    padding: 4px;
+}
+.skin div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skin .fo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.skin label,
+.skin p{
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+}
+.skin img{
+    height: 25px;
+    filter: drop-shadow(0 0 .7rem var(--neonbleu));
+}
+.skin .edit{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 2px var(--neonbleu) !important;
+    padding: 2px;
+    font-size: 22px;
+    color: var(--couleur-blanche);
+    background-color: rgb(0, 0, 0, 0.6);
+    
+}
+.skin .edit:hover{
+    cursor: pointer;
+    color: var(--neonbleu);
+    font-weight: bold;
+}
 /* 
 +----------------------------------------------------------------------+
 | Pour les sélections
