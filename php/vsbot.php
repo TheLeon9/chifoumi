@@ -27,6 +27,30 @@ $skinf = $_SESSION['skinf'];
                     
 $skinc = $_SESSION['skinc'] ;
 
+//difficulté
+$diff = "";
+if (isset($_POST['ez'])) {
+    $diff = "easy";
+}
+else if (isset($_POST['med'])) {
+    $diff = "medium";
+}
+else if(isset($_POST['hard'])) {
+    $diff = "hard";
+}
+
+//bo
+$bo = "";
+if (isset($_POST['boone'])) {
+    $bo = "1";
+}
+else if (isset($_POST['bothree'])) {
+    $bo = "3";
+
+}
+else if(isset($_POST['bofive'])) {
+    $bo = "5";
+}
 
 if (isset($_POST['logout'])) {
     session_destroy();
@@ -50,10 +74,96 @@ if (isset($_POST['logout'])) {
 <body>
     <section>
         <div class="welcome-page">
-            <div class="welcome-carre">
-                <h2>VERSUS BOT</h2>
-                <a href="./menu.php">Return ?</a>
+            <div class="glo">
+                <div class="rightside" id="r">
+                    <h2>VERSUS BOT</h2>
+                    <div>
+                        <p>Easy :</p>
+                        <p>- You earn nothing</p>
+                        <p>Medium :</p>
+                        <p>- You earn nothing</p>
+                        <p>Hard :</p>
+                        <p>- You can earn something</p>
+                    </div>
+                    <p>What do you want ?</p>
+                    <form method="post" action="./vsbot.php" autocomplete="off">
+                        <button type="submit" name="ez" onclick="showmiddle()"> Easy <img src="../assets/images/menu/robotfacile.png"
+                                alt="ez"></button>
+                        <button type="submit" name="med" onclick="showmiddle()" >Medium <img src="../assets/images/menu/robotmoyen.png"
+                                alt="ez"></button>
+                        <button type="submit" name="hard" onclick="showmiddle()">Hard <img src="../assets/images/menu/robothard.png"
+                                alt="ez"></button>
+                    </form>
+                </div>
+                <div class="middleside" id="m">
+                    <h2>VERSUS BOT</h2>
+                    <p>You choose level : <?php echo  "<span>". $diff ."</span>";?></p>
+                    <?php
+                if (isset($_POST['ez'])) { 
+                ?>
+                    <p>In easy mode, only "Bo1" is available</p>
+                    <p>- Bo1 = 1 life</p>
+                    <form method="post" action="./vsbot.php" autocomplete="off">
+                        <button name="boone" onclick="showlast()">Bo1</button>
+                    </form>
+                    <?php    
+                }elseif(isset($_POST['med'])){
+                    ?>
+                    <p>In medium mode, only "Bo3" is available</p>
+                    <p>- Bo3 = 2 life</p>
+                    <form method="post" action="./vsbot.php" autocomplete="off">
+                        <button type="submit" name="bothree" onclick="showlast()">Bo3</button>
+                    </form>
+                    <?php
+
+                }
+                else{
+                ?>
+                    <p>In hard mode, only "Bo5" is available</p>
+                    <p>- Bo5 = 3 life</p>
+                    <form method="post" action="./vsbot.php" autocomplete="off">
+                        <button type="submit" name="bofive" onclick="showlast()">Bo5</button>
+                    </form>
+                <?php
+                }
+                ?>
+                </div>
+                <div class="leftside" id="l">
+                    <h2>VERSUS BOT</h2>
+                    <p>Alright !</p>
+                    <p>You choose level : 
+                        <?php 
+                        if(isset($_POST["boone"])){
+                            echo  "<span>easy</span>";
+                        }
+                        else if(isset($_POST["bothree"])){
+                            echo  "<span>medium</span>";
+                        }else{
+                            echo  "<span>hard</span>";
+                        }
+                        ?>
+                    </p>
+                    <p>With Bo : <?php echo  "<span>". $bo ."</span>";?></p>
+                    <?php
+                    if($bo == '1'){
+                    ?>
+                    <button><a href="./botfight/bo1.php">Let's go</a></button>
+                    <?php
+                    }
+                    if($bo == '3'){
+                        ?>
+                    <button><a href="./botfight/bo2.php">Let's go</a></button>
+                    <?php
+                    }
+                    if($bo == '5'){
+                    ?>
+                    <button><a href="#">Let's go</a></button>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
+            <a href="./menu.php" class="return">Return ?</a>
         </div>
     </section>
     <script src="../assets/js/login_signin.js"></script>

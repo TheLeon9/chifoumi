@@ -42,3 +42,11 @@ function showmodiftitle(){
 function hidemodiftitle(){
     document.getElementById("modiftitle").style.top="-1000px";
 }
+// function showmiddle(){
+//     document.getElementById("r").style.opacity = "0";
+//     document.getElementById("m").style.opacity = "1";
+// }
+// function showlast(){
+//     document.getElementById("m").style.opacity = "0";
+//     document.getElementById("l").style.opacity = "1";
+// }

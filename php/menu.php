@@ -54,7 +54,7 @@ $u = $_SESSION['name'];
                             <a href="./shop.php"><img src="../assets/images/menu/shopping-cart.svg" alt="shop"></a>
                         </div>
                         <div>
-                            <p>LeaderBord</p>
+                            <p>LeaderBoard</p>
                             <img src="../assets/images/welcome/chevrons-down.svg" alt="fleche bas">
                             <a href="./leaderboard.php"><img src="../assets/images/menu/award.svg" alt="leader"></a>
                         </div>

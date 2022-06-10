@@ -6,7 +6,7 @@ html {
 
 :root {
     --couleur-blanche: ghostwhite;
-    --neonbleu: blue;
+    --neonvert: lime;
 }
 
 * {
@@ -31,56 +31,71 @@ section {
 .welcome-page {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Playball', cursive;
-}
-
-.welcome-carre {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 80%;
-    width: 30%;
-    border: solid 1px var(--neonbleu);
-    border-radius: 8px;
-    background-color: rgb(0, 0, 0, 0.6);
-    box-shadow: 0 0 .2rem var(--couleur-blanche),
-        0 0 .2rem var(--couleur-blanche),
-        0 0 2rem var(--neonbleu),
-        0 0 0.8rem var(--neonbleu),
-        0 0 2.8rem var(--neonbleu),
-        inset 0 0 1.3rem var(--neonbleu);
+    justify-content: center;
 }
-
-/* 
-+----------------------------------------------------------------------+
-| Profile
-+----------------------------------------------------------------------+
-*/
-
-h2 {
-    color: var(--couleur-blanche);
+.welcome-page {
     width: 100%;
-    text-align: center;
-    font-size: 60px;
-    letter-spacing: 4px;
-    padding: 4px;
-    margin-top: 40px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-width: 2px;
-    border-image: linear-gradient(to right, transparent, var(--neonbleu), transparent) 1;
+    height: 100%;
+    font-family: 'Playball', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glo{
+    width: 90%;
+    height: 70%;
+    display: flex;
+}
+.glo p{
+    font-size: 20px;
+    color: var(--couleur-blanche);
     text-shadow:
         0 0 7px var(--couleur-blanche),
         0 0 10px var(--couleur-blanche),
         0 0 21px var(--couleur-blanche),
-        0 0 42px var(--neonbleu),
-        0 0 82px var(--neonbleu),
-        0 0 92px var(--neonbleu),
-        0 0 102px var(--neonbleu),
-        0 0 151px var(--neonbleu);
+        0 0 22px var(--neonvert),
+        0 0 30px var(--neonvert);
+    letter-spacing: 2px;
+}
+
+/* 
++----------------------------------------------------------------------+
+| Parti gauche
++----------------------------------------------------------------------+
+*/
+.rightside{
+    width: calc(100%/3);
+    height: 100%;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to bottom, transparent, var(--neonvert), transparent) 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+h2 {
+    color: var(--couleur-blanche);
+    font-size: 30px;
+    letter-spacing: 4px;
+    padding: 6px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to right, transparent, var(--neonvert), transparent) 1;
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 42px var(--neonvert),
+        0 0 82px var(--neonvert),
+        0 0 92px var(--neonvert),
+        0 0 102px var(--neonvert),
+        0 0 151px var(--neonvert);
 }
 a{
     color: var(--couleur-blanche);
@@ -88,20 +103,116 @@ a{
         0 0 7px var(--couleur-blanche),
         0 0 10px var(--couleur-blanche),
         0 0 21px var(--couleur-blanche),
-        0 0 22px var(--neonbleu),
-        0 0 30px var(--neonbleu);
+        0 0 22px var(--neonvert),
+        0 0 30px var(--neonvert);
     font-size: 25px;
     text-decoration: none;
-    margin-top: 8px;
     letter-spacing: 2px;
-
 }
-a:hover{
+.return{
+    position: absolute;
+    bottom: 5%;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonvert),
+        0 0 30px var(--neonvert);
+    font-size: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.return:hover{
     cursor: pointer;
-    border-bottom: 2px solid var(--neonbleu);
-
+    border-bottom: 2px solid var(--neonvert);
+}
+.middleside form,
+.rightside form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    width: 100%;
+}
+.leftside button,
+.middleside button,
+.rightside button{
+    color: var(--couleur-blanche);
+    text-shadow:
+    0 0 7px var(--couleur-blanche),
+    0 0 10px var(--couleur-blanche),
+    0 0 21px var(--couleur-blanche),
+    0 0 22px var(--neonvert),
+    0 0 30px var(--neonvert);
+    border-radius: 50%;
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0.2rem solid var(--neonvert);
+    box-shadow: 0 0 .2rem var(--couleur-blanche),
+        0 0 .2rem var(--couleur-blanche),
+        0 0 2rem var(--neonvert),
+        0 0 0.8rem var(--neonvert),
+        0 0 2.8rem var(--neonvert),
+        inset 0 0 1.3rem var(--neonvert);   
+}
+.leftside button:hover,
+.middleside button:hover,
+.rightside button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 .4rem var(--couleur-blanche),
+    0 0 .4rem var(--couleur-blanche),
+    0 0 4rem var(--neonvert),
+    0 0 1rem var(--neonvert),
+    0 0 4.2rem var(--neonvert),
+    inset 0 0 2.6rem var(--neonvert);   
+}
+.rightside button img{
+    height: 50px;
+}
+span{
+    border-bottom: solid 1px var(--neonvert);
+}
+/* 
++----------------------------------------------------------------------+
+| Parti middle
++----------------------------------------------------------------------+
+*/
+.middleside{
+    width: calc(100%/3);
+    height: 100%;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to bottom, transparent, var(--neonvert), transparent) 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* 
++----------------------------------------------------------------------+
+| Parti droite
++----------------------------------------------------------------------+
+*/
+.leftside{
+    width: calc(100%/3);
+    height: 100%;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to bottom, transparent, var(--neonvert), transparent) 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 /* 
 +----------------------------------------------------------------------+
 | Pour les sélections
