@@ -1,10 +1,10 @@
 function go() {
-    const delay = 500;
-    const delay2 = 1000;
-    const delay3 = 1500;
-    const delay4 = 2000;
-    const delay5 = 2500;
-    const delay6 = 3000;
+    const delay = 100;
+    const delay2 = 200;
+    const delay3 = 300;
+    const delay4 = 400;
+    const delay5 = 500;
+    const delay6 = 600;
     setTimeout(function () {
         document.getElementById("left").style.left = "-100px";
         document.getElementById("right").style.right = "-100px";
@@ -41,4 +41,40 @@ function go() {
         document.getElementById("mid").style.top = "-1500px";
 
     }, delay6);
+}
+function jouerp(){
+    document.getElementById('choix').style.opacity ="0";
+    document.getElementById('m').style.opacity ="0";
+    document.getElementById('m').style.zIndex ="1";
+    document.getElementById('pj').style.opacity ="1";
+    document.getElementById('pj').style.zIndex ="2";
+    document.getElementById('fj').style.opacity ="0";
+    document.getElementById('fj').style.zIndex ="1";
+    document.getElementById('robotimage').style.opacity ="1";
+    document.getElementById('imagepierre').style.opacity ="1";
+    document.getElementById('imagefeuille').style.opacity ="0";
+    document.getElementById("pv").innerHTML = "0 / 1";
+    document.getElementById("pv").style.backgroundColor = "white";
+}
+function jouerf(){
+    document.getElementById('m').style.opacity ="0";
+    document.getElementById('m').style.zIndex ="1";
+    document.getElementById('fj').style.opacity ="1";
+    document.getElementById('fj').style.zIndex ="2";
+    document.getElementById('robotimage').style.opacity ="1";
+    document.getElementById('imagefeuille').style.opacity ="1";
+}
+function jouerc(){
+    document.getElementById('choix').style.opacity ="0";
+    document.getElementById('m').style.opacity ="0";
+    document.getElementById('m').style.zIndex ="1";
+    document.getElementById('cj').style.opacity ="1";
+    document.getElementById('cj').style.zIndex ="2";
+    document.getElementById('fj').style.opacity ="0";
+    document.getElementById('fj').style.zIndex ="1";
+    document.getElementById('robotimage').style.opacity ="1";
+    document.getElementById('imageciseaux').style.opacity ="1";
+    document.getElementById('imagefeuille').style.opacity ="0";
+    document.getElementById("pvrobot").innerHTML = "0 / 1";
+    document.getElementById("pvrobot").style.backgroundColor = "white";
 }

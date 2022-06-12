@@ -193,7 +193,7 @@ if (isset($_POST["emailco"], $_POST["mdpco"])) {
                                     </div>
                                     <div class="agree">
                                         <input type="checkbox" id="agree" name="agree" required>
-                                        <label for="agree">Agree to <a href="">Terms and Conditions</a></label>
+                                        <label for="agree">Agree to <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Terms and Conditions</a></label>
                                     </div>
                                 </div>
                             <div class="butsignin">

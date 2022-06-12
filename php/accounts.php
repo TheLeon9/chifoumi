@@ -64,7 +64,11 @@ if($gender == "man"){
 }else{
     $imagegender = "other.png";
 }
+$level = $win / 2;
+$updateL = $bdd->prepare('UPDATE users SET level = ? WHERE Id= ?');
+$updateL->execute(array($level , $id));
 
+$_SESSION['level'] = $level;
 if (isset($_POST['logout'])) {
     session_destroy();
     header('Location: ../index.php');

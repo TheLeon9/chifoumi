@@ -24,7 +24,8 @@ $u = $_SESSION['name'];
 <body>
     <section>
         <div class="welcome-page">
-            <button class="parametre"><img src="../assets/images/menu/settings.svg" alt=""></button>
+            <!-- <p id="troll" class="troll">Made by ME !!</p> -->
+            <button class="parametre" onclick="troll()"><img src="../assets/images/menu/settings.svg" alt="" ></button>
 
             <div class="welcome-carre">
                 <div class="text">
@@ -46,7 +47,7 @@ $u = $_SESSION['name'];
                         <div>
                             <p>1 vs 1</p>
                             <img src="../assets/images/welcome/chevrons-down.svg" alt="fleche bas">
-                            <a href="#"><img src="../assets/images/menu/1v1.svg" class="versus" alt="versus"></a>
+                            <a href="./vsplayer.php"><img src="../assets/images/menu/1v1.svg" class="versus" alt="versus"></a>
                         </div>
                         <div>
                             <p>Shop</p>
@@ -64,6 +65,7 @@ $u = $_SESSION['name'];
 
         </div>
     </section>
+    <script src="../assets/js/index.js"></script>
 
 </body>
 

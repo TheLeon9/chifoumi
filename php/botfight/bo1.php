@@ -27,6 +27,14 @@ $skinf = $_SESSION['skinf'];
                     
 $skinc = $_SESSION['skinc'] ;
 
+$botmove = rand(1,2);
+$imagebot ="";
+if($botmove == 1){
+    $imagebot = "cartoonFr.png";
+}else{
+    $imagebot = "defaultFr.png";
+
+}
 if($gender == "man"){
     $imagegender = "man.png";
 }elseif($gender == "woman"){
@@ -34,7 +42,7 @@ if($gender == "man"){
 }else{
     $imagegender = "other.png";
 }
-$nomrobot = "Bot #34445";
+$nomrobot = "Bot#".rand(100 , 1000);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,28 +80,91 @@ $nomrobot = "Bot #34445";
                 <img src="../../assets/images/menu/robotfacile.png" alt="ez">
             </div>
             <div class="leftdessous">
-                <h3>ON THE LEFT !</h3>
+                    <h3>
+                        <?php
+                            echo  $u ;
+                    ?>
+                    </h3>
+                <div  class="pv">
+                    <h5>HP : </h5>
+                    <h6 id="pv">1 / 1</h6>
+                </div>
+                <div id="imagepierre" class="imagejoueur">
                 <?php
-                        echo  "<p>" . $u . " </p>";
+                    echo  "<img src=\"../../assets/images/pierre/".$skinp."\" alt=\"pierre\">";
                 ?>
-                <div>
-                    <button>CHI</button>
-                    <button>FOU</button>
-                    <button>MI</button>
+                </div>
+                <div id="imagefeuille" class="imagejoueur">
+                <?php
+                    echo  "<img src=\"../../assets/images/feuille/".$skinf."\" alt=\"feuille\">";
+                ?>
+                </div>
+                <div id="imageciseaux" class="imagejoueur">
+                <?php
+                    echo  "<img src=\"../../assets/images/ciseaux/".$skinc."\" alt=\"ciseaux\">";
+                ?>
+                </div>
+                <div id="choix" class="choix">
+                    <button onclick="jouerp()" name="chi">CHI</button>
+                    <button onclick="jouerf()" name="fou">FOU</button>
+                    <button onclick="jouerc()" name="mi">MI</button>
                 </div>
             </div>
-            <div class="milieudessous">
-
-            </div>
             <div class="rightdessous">
-            <h3>ON THE RIGHT !</h3>
+                <h3>
+                    <?php
+                        echo   $nomrobot;
+                ?>
+                </h3>
+                <div  class="pv">
+                    <h5>HP : </h5>
+                    <h6 id="pvrobot">1 / 1</h6>
+                </div>
+                <div id="robotimage" class="robotimage">
                 <?php
-                        echo  "<p>" . $nomrobot . " </p>";
+                echo  "<img src=\"../../assets/images/feuille/".$imagebot."\" alt=\"bot\">";
+                ?>
+                </div>
+                <div id="choix" class="choix">
+                    <button name="chi">BOT</button>
+                    <button  name="fou">BOT</button>
+                    <button  name="mi">BOT</button>
+                </div>
+            </div>
+            <div class="milieudessous" id="m">
+                <h4>Let's GO ?</h4>
+                <p>It's a ONE SHOT</p>
+                <p>GOOD LUCK</p>
+                <div>
+                    <a href="../menu.php" class="quit">QUIT</a>
+                </div>
+            </div>
+            <div class="pierrej" id="pj">
+                <h4>YOU LOSE !!</h4>
+                <?php
+                echo  "<p> BOUH : " . $u . " </p>";
                 ?>
                 <div>
-                    <button>CHI</button>
-                    <button>FOU</button>
-                    <button>MI</button>
+                    <a href="./bo1.php" class="restart">RESTART</a>
+                    <a href="../menu.php" class="quit">QUIT</a>
+                </div>
+            </div>
+            <div class="feuillej" id="fj">
+                <h4>NO WINNER !!</h4>
+                <p>GO AGAIN !</p>
+                <div>
+                    <a href="../menu.php" class="quit">QUIT</a>
+                </div>
+            </div>
+            <div class="ciseauxj" id="cj">
+            <h4>YOU WIN !!</h4>
+                <?php
+                echo  "<p> WP : " . $u . " </p>";
+                ?>
+                <p>You earn nothing !!</p>
+                <div>
+                    <a href="./bo1.php" class="restart">RESTART</a>
+                    <a href="../menu.php" class="quit">QUIT</a>
                 </div>
             </div>
         </div>

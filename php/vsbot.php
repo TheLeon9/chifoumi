@@ -40,7 +40,7 @@ else if(isset($_POST['hard'])) {
 }
 
 //bo
-$bo = "";
+$bo = "??";
 if (isset($_POST['boone'])) {
     $bo = "1";
 }
@@ -121,6 +121,8 @@ if (isset($_POST['logout'])) {
                 ?>
                     <p>In hard mode, only "Bo5" is available</p>
                     <p>- Bo5 = 3 life</p>
+                    <p>- Your earn 1 win if you win and 0.5 level</p>
+                    <p>- But if you lose you earn 1 lose and no level</p>
                     <form method="post" action="./vsbot.php" autocomplete="off">
                         <button type="submit" name="bofive" onclick="showlast()">Bo5</button>
                     </form>
@@ -138,8 +140,12 @@ if (isset($_POST['logout'])) {
                         }
                         else if(isset($_POST["bothree"])){
                             echo  "<span>medium</span>";
-                        }else{
+                        }
+                        else if(isset($_POST["bofive"])){
                             echo  "<span>hard</span>";
+                        }
+                        else{
+                            echo  "<span>??</span>";
                         }
                         ?>
                     </p>
@@ -157,7 +163,7 @@ if (isset($_POST['logout'])) {
                     }
                     if($bo == '5'){
                     ?>
-                    <button><a href="#">Let's go</a></button>
+                    <button><a href="./botfight/bo3.php">Let's go</a></button>
                     <?php
                     }
                     ?>
