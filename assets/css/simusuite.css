@@ -108,19 +108,7 @@ section {
         0 0 30px var(--neon-rouge);
     margin-bottom: 40px;
 }
-.milieudessus p{
-    font-size: 16px;
-    letter-spacing: 2px;
-    color: var(--couleur-blanche);
-    text-shadow:
-        0 0 7px var(--couleur-blanche),
-        0 0 10px var(--couleur-blanche),
-        0 0 21px var(--couleur-blanche),
-        0 0 22px var(--neonbleu),
-        0 0 30px var(--neonbleu);
-}
-.rightdessous p,
-.rightdessus p{
+.rightdessous p{
     font-size: 40px;
     border-bottom:solid 1px white;
     letter-spacing: 2px;
@@ -133,7 +121,31 @@ section {
         0 0 30px var(--neonbleu);
     margin-bottom: 40px;
 }
-
+.rightdessus p{
+    font-size: 40px;
+    border-bottom:solid 1px white;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+    margin-bottom: 40px;
+    opacity: 0;
+}
+.milieudessus p{
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+}
 .milieudessus{
     z-index: 7;
     position: absolute;
@@ -148,7 +160,8 @@ section {
     justify-content: center;
     align-items: center;
 }
-.tchat h4,
+.hpnotlose h4,
+.hplose h4,
 .pierrej h4,
 .feuillej h4,
 .ciseauxj h4,
@@ -240,7 +253,7 @@ section {
 .milieudessous{
     z-index: 2;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 40%;
@@ -251,53 +264,14 @@ section {
     justify-content: space-evenly;
     align-items: center;
 }
-.tchat{
-    z-index: 2;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 35%;
-    width:20%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.tchat h6{
-    font-size: 16px;
-    letter-spacing: 2px;
-    color: var(--couleur-blanche);
-    text-shadow:
-    0 0 7px var(--couleur-blanche),
-    0 0 10px var(--couleur-blanche),
-    0 0 21px var(--couleur-blanche),
-    0 0 22px var(--couleur-blanche),
-    0 0 30px var(--couleur-blanche);
-    border-bottom-style: solid;
-    border-width: 2px;
-    border-image: linear-gradient(to right, var(--neonbleu), var(--neon-rouge)) 1;
-
-}
-.tchat p{
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: var(--couleur-blanche);
-    text-shadow:
-        0 0 7px var(--couleur-blanche),
-        0 0 10px var(--couleur-blanche),
-        0 0 21px var(--couleur-blanche),
-        0 0 22px var(--couleur-blanche),
-        0 0 30px var(--couleur-blanche);
-}
+.hpnotlose,
+.hplose,
 .pierrej ,
 .feuillej ,
 .ciseauxj {
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 40%;
@@ -308,7 +282,10 @@ section {
     justify-content: space-evenly;
     align-items: center;
     opacity: 0;
+    margin-top: 20px;
 }
+.hpnotlose p,
+.hplose p,
 .pierrej p,
 .feuillej p,
 .ciseauxj p,
@@ -367,14 +344,23 @@ section {
     align-items: center;
     opacity: 0;
 }
+.robotimageautreautre,
+.robotimageautre{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
 .imagejoueur{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-
 }
+.robotimageautreautre img,
+.robotimageautre img,
 .robotimage img{
     height: 200px;
     filter: drop-shadow(0 0 .7rem var(--neon-rouge));   
@@ -452,6 +438,44 @@ section {
         inset 0 0 1.3rem var(--neonbleu);   
 
 }
+.loader{
+    position: absolute;
+    height: 200px;
+    filter: drop-shadow(0 0 .7rem var(--neonbleu));
+    opacity: 1;
+    animation: 6s linear 0s infinite running  rotate;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.rightdessus img:last-child{
+    height: 200px;
+    filter: drop-shadow(0 0 .7rem var(--neonbleu));
+    opacity: 0;
+}
+.click{
+    position: absolute;
+    font-size: 120px;
+    color: var(--couleur-blanche);
+    text-shadow:
+    0 0 7px var(--couleur-blanche),
+    0 0 10px var(--couleur-blanche),
+    0 0 21px var(--couleur-blanche),
+    0 0 15px var(--neon-rouge),
+    0 0 22px var(--neonbleu),
+    0 0 30px var(--neonbleu),
+    0 0 100px var(--neonbleu);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    opacity: 0;
+}
 
 .rightdessous button{
     color: var(--couleur-blanche);
@@ -498,6 +522,50 @@ section {
     inset 0 0 2.6rem var(--neon-rouge);   
 
 }
+.tchat{
+    z-index: 2;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 40%;
+    width:20%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tchat h6{
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+    0 0 7px var(--couleur-blanche),
+    0 0 10px var(--couleur-blanche),
+    0 0 21px var(--couleur-blanche),
+    0 0 22px var(--couleur-blanche),
+    0 0 30px var(--couleur-blanche);
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to right, var(--neonbleu), var(--neon-rouge)) 1;
+    opacity: 0;
+
+}
+.tchat p{
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--couleur-blanche),
+        0 0 30px var(--couleur-blanche);
+    opacity: 0;
+}
+
 /* 
 +----------------------------------------------------------------------+
 | Pour les sélections

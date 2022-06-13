@@ -74,16 +74,25 @@ function showbutton1(){
     document.getElementById("but1").style.opacity = "1";
     document.getElementById("but2").style.opacity = "0";
     document.getElementById("but3").style.opacity = "0";
+    document.getElementById("but2").style.zIndex = "1";
+    document.getElementById("but3").style.zIndex = "1";
+    document.getElementById("but1").style.zIndex = "2";
 }
 function showbutton2(){
     document.getElementById("but0").style.opacity = "1";
     document.getElementById("but1").style.opacity = "0";
     document.getElementById("but2").style.opacity = "1";
     document.getElementById("but3").style.opacity = "0";
+    document.getElementById("but2").style.zIndex = "2";
+    document.getElementById("but3").style.zIndex = "1";
+    document.getElementById("but1").style.zIndex = "1";
 }
 function showbutton3(){
     document.getElementById("but0").style.opacity = "1";
     document.getElementById("but1").style.opacity = "0";
     document.getElementById("but2").style.opacity = "0";
     document.getElementById("but3").style.opacity = "1";
+    document.getElementById("but2").style.zIndex = "1";
+    document.getElementById("but3").style.zIndex = "2";
+    document.getElementById("but1").style.zIndex = "1";
 }

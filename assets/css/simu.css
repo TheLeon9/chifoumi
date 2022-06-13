@@ -68,9 +68,43 @@ section {
     height: 200px;
     filter: drop-shadow(0 0 .7rem var(--neon-rouge));
 }
-.rightdessus img{
+.click{
+    position: absolute;
+    font-size: 120px;
+    color: var(--couleur-blanche);
+    text-shadow:
+    0 0 7px var(--couleur-blanche),
+    0 0 10px var(--couleur-blanche),
+    0 0 21px var(--couleur-blanche),
+    0 0 15px var(--neon-rouge),
+    0 0 22px var(--neonbleu),
+    0 0 30px var(--neonbleu),
+    0 0 100px var(--neonbleu);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    opacity: 0;
+}
+.loader{
+    position: absolute;
     height: 200px;
     filter: drop-shadow(0 0 .7rem var(--neonbleu));
+    opacity: 1;
+    animation: 6s linear 0s infinite running  rotate;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.rightdessus img:last-child{
+    height: 200px;
+    filter: drop-shadow(0 0 .7rem var(--neonbleu));
+    opacity: 0;
 }
 .leftdessus h3{
     font-size: 80px;
@@ -119,7 +153,19 @@ section {
         0 0 22px var(--neonbleu),
         0 0 30px var(--neonbleu);
 }
-.rightdessous p,
+.rightdessous p{
+    font-size: 40px;
+    border-bottom:solid 1px white;
+    letter-spacing: 2px;
+    color: var(--couleur-blanche);
+    text-shadow:
+        0 0 7px var(--couleur-blanche),
+        0 0 10px var(--couleur-blanche),
+        0 0 21px var(--couleur-blanche),
+        0 0 22px var(--neonbleu),
+        0 0 30px var(--neonbleu);
+    margin-bottom: 40px;
+}
 .rightdessus p{
     font-size: 40px;
     border-bottom:solid 1px white;
@@ -132,6 +178,7 @@ section {
         0 0 22px var(--neonbleu),
         0 0 30px var(--neonbleu);
     margin-bottom: 40px;
+    opacity: 0;
 }
 
 .milieudessus{
@@ -240,7 +287,7 @@ section {
 .milieudessous{
     z-index: 2;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 40%;
@@ -254,10 +301,10 @@ section {
 .tchat{
     z-index: 2;
     position: absolute;
-    top: 20%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 35%;
+    height: 40%;
     width:20%;
     background-color: black;
     display: flex;
@@ -266,7 +313,7 @@ section {
     align-items: center;
 }
 .tchat h6{
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2px;
     color: var(--couleur-blanche);
     text-shadow:
@@ -278,11 +325,12 @@ section {
     border-bottom-style: solid;
     border-width: 2px;
     border-image: linear-gradient(to right, var(--neonbleu), var(--neon-rouge)) 1;
+    opacity: 0;
 
 }
 .tchat p{
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
     color: var(--couleur-blanche);
     text-shadow:
@@ -291,13 +339,14 @@ section {
         0 0 21px var(--couleur-blanche),
         0 0 22px var(--couleur-blanche),
         0 0 30px var(--couleur-blanche);
+    opacity: 0;
 }
 .pierrej ,
 .feuillej ,
 .ciseauxj {
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 40%;

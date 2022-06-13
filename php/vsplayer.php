@@ -89,21 +89,21 @@ $skinc = $_SESSION['skinc'] ;
                     <h2>VERSUS Player</h2>
                     <div id="but1">
                         <span>Bo1</span>
-                        <a href="">Create a Session</a>
-                        <a href="">Join a Session</a>
-                        <a href="">See a simulation</a>
+                        <a href="#">Create a Session</a>
+                        <a href="#">Join a Session</a>
+                        <a href="./simulation/sim1.php">See a simulation</a>
                     </div>
                     <div id="but2">
                         <span>Bo3</span>
-                        <a href="">Create a Session</a>
-                        <a href="">Join a Session</a>
-                        <a href="">See a simulation</a>
+                        <a href="#">Create a Session</a>
+                        <a href="#">Join a Session</a>
+                        <a href="./simulation/sim2.php">See a simulation</a>
                     </div>
                     <div id="but3">
                         <span>Bo5</span>
-                        <a href="">Create a Session</a>
-                        <a href="">Join a Session</a>
-                        <a href="">See a simulation</a>
+                        <a href="#">Create a Session</a>
+                        <a href="#">Join a Session</a>
+                        <a href="./simulation/sim3.php">See a simulation</a>
                     </div>
                 </div>
             </div>
