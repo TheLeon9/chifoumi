@@ -34,11 +34,15 @@ Code writted by **MORACCHINI Florian**, **ESTRADE Duane**
 
 3. You have the profile page to see your profile.
 
-4. The Game page to play.
+4. The Game page to play. 
 
-5. You need to win 3 times to win the fight.
+5. The Bot page to play vs a bot
 
-6. Have luck, have tactics, and be at the top !!
+6. LeaderBoard page to see the leaderboard
+
+7. Shop page to see the shop
+
+8. Have luck, have tactics, and be at the top !!
 
 
 ------------------------
@@ -52,6 +56,10 @@ Code writted by **MORACCHINI Florian**, **ESTRADE Duane**
 * JavaScript for the animation.
 
 * php for the back.
+
+* phpmyadmin for the database
+
+* FIGMA for the pictures
 
 ------------------------
 
