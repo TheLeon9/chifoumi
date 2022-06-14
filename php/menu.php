@@ -24,7 +24,7 @@ $u = $_SESSION['name'];
 <body>
     <section>
         <div class="welcome-page">
-            <!-- <p id="troll" class="troll">Made by ME !!</p> -->
+            <p id="troll" class="troll">SHEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEESHH !!!!</p>
             <button class="parametre" onclick="troll()"><img src="../assets/images/menu/settings.svg" alt="" ></button>
 
             <div class="welcome-carre">

@@ -193,6 +193,11 @@ img:hover{
 .parametre img{
     height: 35px;
 }
+.troll{
+    position: absolute;
+    top: 45%;
+    opacity: 0;
+}
 /* 
 +----------------------------------------------------------------------+
 | Pour les sélections

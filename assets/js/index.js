@@ -78,3 +78,11 @@ function jouerc(){
     document.getElementById("pvrobot").innerHTML = "0 / 1";
     document.getElementById("pvrobot").style.backgroundColor = "white";
 }
+function troll(){
+    if(document.getElementById('troll').style.opacity === "1"){
+        document.getElementById('troll').style.opacity="0";
+    }else{
+        document.getElementById('troll').style.opacity="1";
+    }
+    
+}

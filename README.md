@@ -12,7 +12,7 @@
 
 # Description 
 
-Our project is a site for playing chifoumi versus a bot or an other player
+Our project is a site for playing chifoumi versus a bot ( in the future an other player)
 
 ------------------------
                                        
@@ -28,7 +28,7 @@ Code writted by **MORACCHINI Florian**, **ESTRADE Duane**
 
 ## How does the page work
 
-1. When you arrive on the index.php, you can login or register.
+1. When you arrive on the index.php after a "click", you can login or register.
 
 2. After login you arrive at a page where you can choose what you want to do.
 
@@ -40,9 +40,11 @@ Code writted by **MORACCHINI Florian**, **ESTRADE Duane**
 
 6. LeaderBoard page to see the leaderboard
 
-7. Shop page to see the shop
+7. Shop page to see the future shop
 
 8. Have luck, have tactics, and be at the top !!
+
+9. There is 2 easter egg try to find them ^^
 
 
 ------------------------
